@@ -1,0 +1,31 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@import "partials/base";
+
+* {
+  @include box-sizing(border-box)
+}
+
+body {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+}
+
+code {
+  font-family: "Monaco", "Lucida Console", "Courier Sans", monospace;
+}
+
+@import "partials/slide";
+@import "partials/slide-00";
+@import "partials/slide-01";
+@import "partials/slide-02";
+@import "partials/slide-03";
+@import "partials/slide-04";
+@import "partials/slide-05";
+@import "partials/slide-06";
+@import "partials/slide-07";

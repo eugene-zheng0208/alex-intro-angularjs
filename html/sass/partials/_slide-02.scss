@@ -1,0 +1,28 @@
+#slide-02 {
+  .scope {
+    @include circle($default-circle-radius);
+
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+
+    padding-top: 50px;
+
+    background: $text-color;
+    color: $third-color;
+
+    @include default-box-shadow();
+
+    hr {
+      background: $third-color;
+      border: none;
+      width: 125px;
+      height: 2px;
+    }
+  }
+
+  #child-scope {
+    top: 35%;
+    left: 60%;
+  }
+}

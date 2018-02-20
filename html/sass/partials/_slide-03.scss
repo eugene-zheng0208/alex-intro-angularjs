@@ -1,0 +1,57 @@
+@mixin layer($layer-name, $height) {
+  @include keyframes($layer-name) {
+    0% { top: 0; }
+    50% { top: $height; }
+    100% { top: 0; }
+  }
+}
+
+@include layer("layer-00", 100px);
+@include layer("layer-01", 75px);
+@include layer("layer-02", 50px);
+@include layer("layer-03", 25px);
+
+#slide-03 {
+  .layer {
+    position: absolute;
+    background: $third-color;
+
+    top: 60%;
+    left: 50%;
+
+    width: 200px;
+    height: 200px;
+
+    margin-left: -100px;
+
+    @include rotate3d(1, 0, -1, 60deg);
+  }
+
+  #layer-00 {
+    top: 100px;
+    background: darken($third-color, 40%);
+    @include animation(layer-00 3s ease-in-out infinite);
+  }
+
+  #layer-01 {
+    top: 75px;
+    background: darken($third-color, 30%);
+    @include animation(layer-01 3s ease-in-out infinite);
+  }
+
+  #layer-02 {
+    top: 50px;
+    background: darken($third-color, 20%);
+    @include animation(layer-02 3s ease-in-out infinite);
+  }
+
+  #layer-03 {
+    top: 25px;
+    background: darken($third-color, 10%);
+    @include animation(layer-03 3s ease-in-out infinite);
+  }
+
+  #layer-04 {
+    top: 0;
+  }
+}

@@ -1,0 +1,69 @@
+$s05-border-radius: 20px;
+
+#slide-05 {
+  .scope {
+    width: 90%;
+    height: 75%;
+    max-width: 768px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+
+    border-radius: $s05-border-radius;
+    @include box-shadow($shadow-color 6px 6px 0,
+                        $shadow-color 0 0 6px);
+
+    .scope-header {
+      position: relative;
+
+      background: darken($fourth-color, 10%);
+      color: $text-color;
+
+      height: 25%;
+
+      font-size: 28pt;
+      font-weight: bold;
+      text-align: center;
+
+      border-top-left-radius: $s05-border-radius;
+      border-top-right-radius: $s05-border-radius;
+
+      .scope-header-top,
+      .scope-header-bottom {
+        height: 35%;
+      }
+    }
+
+    .scope-body {
+      background: $text-color;
+      height: 75%;
+
+      border-bottom-left-radius: $s05-border-radius;
+      border-bottom-right-radius: $s05-border-radius;
+
+      .left,
+      .center,
+      .right {
+        float: left;
+        width: 33.33%;
+        height: 100%;
+        padding: 30px;
+        overflow: hidden;
+
+      }
+
+      .row {
+        position: relative;
+        background: $third-color;
+        width: 100%;
+        height: 15px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+      }
+
+      .row-75 {
+        width: 75%;
+      }
+    }
+  }
+}

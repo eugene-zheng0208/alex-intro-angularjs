@@ -1,0 +1,16 @@
+#slide-01 {
+  .scope {
+    @include circle($default-circle-radius);
+
+    padding-top: 50px;
+
+    overflow: hidden;
+    text-align: center;
+
+    border: 5px solid $text-color;
+
+    color: $text-color;
+    @include text-shadow($shadow-color 2px 2px 0);
+    @include default-box-shadow();
+  }
+}
